@@ -15,9 +15,8 @@ public class Abonent {
     private String name;
     @Column(name = "surname", nullable = false)
     private String surname;
-    // Для того чтобы привести номер телефона в нужный формат я использовал NUmberFormat
+
     @Column(name = "phone", nullable = false, unique = true)
-    @NumberFormat(style = NumberFormat.Style.NUMBER, pattern = "(\\+996|)[0-9]")
     private Long phoneNumber;
     @ManyToOne
     @JoinColumn(name = "city_id")
