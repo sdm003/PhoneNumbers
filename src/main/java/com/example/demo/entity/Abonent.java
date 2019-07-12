@@ -1,6 +1,5 @@
 package com.example.demo.entity;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
@@ -8,19 +7,20 @@ import javax.persistence.*;
 @Entity
 @Table(name = "abonent")
 public class Abonent {
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
-@Column(name = "name",nullable = false)
-private String name;
-@Column(name = "surname",nullable = false)
-private String surname;
-@Column(name = "phone",nullable = false,unique = true)
-@NumberFormat(style = NumberFormat.Style.NUMBER, pattern = "(\\+996|)[0-9]")
-private Long phoneNumber;
-@ManyToOne
-@JoinColumn(name = "city_id")
-private City city;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name = "name", nullable = false)
+    private String name;
+    @Column(name = "surname", nullable = false)
+    private String surname;
+    @Column(name = "phone", nullable = false, unique = true)
+    @NumberFormat(style = NumberFormat.Style.NUMBER, pattern = "(\\+996|)[0-9]")
+    private Long phoneNumber;
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 
     public Abonent(String name, String surname, Long phoneNumber) {
         this.name = name;
