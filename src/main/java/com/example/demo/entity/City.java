@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "City")
 public class City {
+    //Я подумал что будет лучше если я свяжу две таблицы Области и Города, чтобы при создани Абонента указывать только ID города.
+    //Поэтому таблица город будет содержать ID региона, так как каждый город находится внутри какого-то региона.
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

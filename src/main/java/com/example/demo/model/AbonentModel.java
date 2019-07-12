@@ -14,6 +14,7 @@ public class AbonentModel {
     }
 
 
+// Для метода Changeabonent
     public AbonentModel(Long id,Long phoneNumber, String name, String surname,Long cityId) {
         this.phoneNumber = phoneNumber;
         this.name = name;
@@ -22,7 +23,7 @@ public class AbonentModel {
         this.id=id;
 
     }
-
+//Для метода getAbonent
     public AbonentModel(Long id, Long phoneNumber, String name, String surname, String cityName, String regionName) {
         this.id = id;
         this.phoneNumber = phoneNumber;

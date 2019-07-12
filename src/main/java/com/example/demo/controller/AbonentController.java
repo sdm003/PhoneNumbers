@@ -13,12 +13,12 @@ public class AbonentController {
     AbonentService abonentService;
 
 @PostMapping
-public Long create(@RequestBody Abonent abonent,@RequestBody Long cityId){
+public Long create(@RequestBody Abonent abonent,@RequestHeader Long cityId){
     return
     abonentService.addAbonent(abonent,cityId);
 }
 @GetMapping
-    public AbonentModel get(@RequestBody Long abonentId){
+    public AbonentModel get(@RequestHeader Long abonentId){
    return abonentService.getAbonent(abonentId);
 }
 @PutMapping
