@@ -15,7 +15,7 @@ public class CityController {
 
     @PostMapping
     @RequestMapping("/create")
-    public Long create(@RequestBody String cityName, @RequestHeader Long regionId){
+    public Long create(@RequestHeader String cityName, @RequestHeader Long regionId){
         return cityService.addCity(cityName,regionId);
     }
 }
