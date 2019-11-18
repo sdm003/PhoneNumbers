@@ -12,7 +12,6 @@ public class RequestServiceImpl implements RequestService {
     @Autowired
     RequestRepository requestRepository;
 
-// ID Города указывается отдельно для удобаства, чтобы не заполнять поле город полностью
 @Override
     public Long addRequest(Request request)
     {
@@ -22,7 +21,6 @@ public class RequestServiceImpl implements RequestService {
 
     }
 
-// Я создал модель для удбного изменения данных в абоненте. Изменятся будут только те поля, которые были заданы в параметрах, остальные поля остануться прежними.
     @Override
     public Long changeRequest(Integer requestId, Request request) {
 
@@ -68,7 +66,7 @@ public class RequestServiceImpl implements RequestService {
 
         return request1.getId();
     }
-//Для отображения только тех данных, которые мне нужны я использую модель абонента.
+
     @Override
     public List<Request> getAllRequests() {
 
